@@ -24,8 +24,8 @@ public class BMW {
         }
 	}
 	
-	public synchronized void printID() {	//Die Methode wird synchronisiert, dass heiﬂt, jeder Thread
-		for(Object elem : productionState)	//betritt "exklusiv" diese Methode. Alle anderen Threads m¸ssen so 
-			System.out.println(elem);		//lange warten, bis der aktuelle Thread die Methode abgearbeitet hat
+	public synchronized void printID() {		//Die Methode wird synchronisiert, dass hei√üt, jeder Thread
+		for(Object elem : productionState)	//betritt "exklusiv" diese Methode. Alle anderen Threads m√ºssen so 
+			System.out.println(elem);	//lange warten, bis der aktuelle Thread die Methode abgearbeitet hat
 	}
 }
