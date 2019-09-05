@@ -13,9 +13,9 @@ import org.w3c.dom.ranges.RangeException;
 //Ersten drei Ziffern -> World Manufacturer Identifier (WMI)
 
 
-public class Chassis extends Production {		//Fahrgestell
+public class Chassis extends Production {				//Fahrgestell
 	private String VIN;							
-	private String WMI = "WBA";					//WBA für BMW (W steht für Europa bzw. Deutschland, BA für die Automarke BMW)				
+	private String WMI = "WBA";					//WBA fÃ¼r BMW (W steht fÃ¼r Europa bzw. Deutschland, BA fÃ¼r die Automarke BMW)				
 	private String PS;
 	
 	
@@ -63,7 +63,7 @@ public class Chassis extends Production {		//Fahrgestell
 		}
 	}
 	
-	private String wheelSuspension() {			//Radaufhängung
+	private String wheelSuspension() {			//RadaufhÃ¤ngung
 		String wheel = "Wheel suspension is mounted!";		
 		return wheel;
 	}
@@ -73,7 +73,7 @@ public class Chassis extends Production {		//Fahrgestell
 		return trans;
 	}
 
-	private String engine() {					//Motor
+	private String engine() {				//Motor
 		String eng = "Engine is mounted!";
 		return eng;
 	}
