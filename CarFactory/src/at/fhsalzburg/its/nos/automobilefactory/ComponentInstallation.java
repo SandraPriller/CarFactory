@@ -6,14 +6,14 @@ import java.util.Random;
 import org.w3c.dom.ranges.RangeException;
 
 
-public class ComponentInstallation extends Production {		//Komponenteneinbau
+public class ComponentInstallation extends Production {					//Komponenteneinbau
 	private String extras;
 	private String extras1;
 	private int price;
 	private int price1;
 	
 	
-	protected synchronized void randExtras() {				//Funktion adaptiert aus https://www.baeldung.com/java-random-list-element
+	protected synchronized void randExtras() {					//Funktion adaptiert aus https://www.baeldung.com/java-random-list-element
 	    Random rand = new Random();										
 	    List<String> extraList = Arrays.asList("Sunroof", "Navigation Device", "Leather Interior", "Air Conditioner", "Heated Seats", "Parking Assistant", "Multifunctional Steering Wheel");	 
 	    int numberOfElements = 1;
@@ -30,8 +30,8 @@ public class ComponentInstallation extends Production {		//Komponenteneinbau
 	    		int randomIndex = rand.nextInt(extraList.size());
 	    		extras1 = extraList.get(randomIndex);
 	        
-	    		while(extras1.equals(getExtras())) {					//Die Methode wurde auch synchronisiert, da es vorkam, dass beispielsweise
-	    			randomIndex = rand.nextInt(extraList.size());		//das Auto 2 Schiebed‰cher hatte
+	    		while(extras1.equals(getExtras())) {				//Die Methode wurde auch synchronisiert, da es vorkam, dass beispielsweise
+	    			randomIndex = rand.nextInt(extraList.size());		//das Auto 2 Schiebed√§cher hatte
 	    			extras1 = extraList.get(randomIndex);		    	
 	    		} 
 	    			setExtras1(extras1);
@@ -90,8 +90,8 @@ public class ComponentInstallation extends Production {		//Komponenteneinbau
 	}
 	
 	public synchronized int calculateExtrasPrice() {		//Auch hier wird die Methode synchronisiert, um jeden Thread einzeln
-		setExtrasPrice();									//abzuarbeiten und den berechneten Preis nicht von einem anderen Thread zu
-		setExtras1Price();									//¸berschreiben
+		setExtrasPrice();					//abzuarbeiten und den berechneten Preis nicht von einem anderen Thread zu
+		setExtras1Price();					//√ºberschreiben
 		int price = getPrice() + getPrice1();		
 		return price;
 	}
@@ -101,17 +101,17 @@ public class ComponentInstallation extends Production {		//Komponenteneinbau
 		return wheel;
 	}
 	
-	private String exterior() {					//Auﬂenausbau - Spiegel - Antenne - Scheinwerfer
+	private String exterior() {					//Au√üenausbau - Spiegel - Antenne - Scheinwerfer
 		String trans = "Exterior is created!";		
 		return trans;
 	}
 	
-	private String electrical() {				//Elektrik
+	private String electrical() {					//Elektrik
 		String eng = "Electrical is created!";
 		return eng;
 	}
 	
-	private String engineInstallation() {		//Motoreinbau
+	private String engineInstallation() {				//Motoreinbau
 		String eng = "Engine is installed!";
 		return eng;
 	}
