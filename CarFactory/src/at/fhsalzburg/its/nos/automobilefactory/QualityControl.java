@@ -1,19 +1,19 @@
 package at.fhsalzburg.its.nos.automobilefactory;
 
-public class QualityControl extends Production {		//Qualitätskontrolle
+public class QualityControl extends Production {		//QualitÃ¤tskontrolle
 	
 	
-	private String setTrack() {							//Spur einstellen
+	private String setTrack() {				//Spur einstellen
 		String st = "Track is set!";
 		return st;
 	}
 	
-	private String fillLiquids() {						//Bremsflüssigkeit - Motoröl - Wischwasser etc.
+	private String fillLiquids() {				//BremsflÃ¼ssigkeit - MotorÃ¶l - Wischwasser etc.
 		String fl = "Liquids are replenished!";
 		return fl;
 	}
 	
-	private String polishCar() {						//Auto polieren
+	private String polishCar() {				//Auto polieren
 		String pc = "Car is polished!";		
 		return pc;
 	}
